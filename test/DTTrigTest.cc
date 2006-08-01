@@ -146,8 +146,8 @@ public:
     // GEANT Block
     Handle<vector<EmbdSimTrack> > MyTracks;
     Handle<vector<EmbdSimVertex> > MyVertexes;
-    iEvent.getByLabel("SimG4Object",MyTracks);
-    iEvent.getByLabel("SimG4Object",MyVertexes);
+    iEvent.getByLabel("g4SimHits",MyTracks);
+    iEvent.getByLabel("g4SimHits",MyVertexes);
     vector<EmbdSimTrack>::const_iterator itrack;
     ngen=0;
     cout  << "Tracks found in the detector" << MyTracks->size() <<endl;
