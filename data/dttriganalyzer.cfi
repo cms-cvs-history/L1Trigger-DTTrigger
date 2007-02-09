@@ -1,0 +1,11 @@
+module dttriganalyzer = DTTrigTest {
+
+	# Incude configuration parametersets
+	include "L1Trigger/DTTrigger/data/dttpg_conf.cff"
+
+	# Debug Parameter
+	untracked bool debug = false 
+
+	# Output filename
+	untracked string outputFileName = "DTTPG_test.root"
+}

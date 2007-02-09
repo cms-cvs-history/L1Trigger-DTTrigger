@@ -1,0 +1,5 @@
+PSet DTTPGParameters = {
+	include "L1Trigger/DTSectorCollector/data/dtsectcoll.cff"
+	include "L1Trigger/DTSectorCollector/data/dttu.cff"
+	untracked bool Debug = false
+}
