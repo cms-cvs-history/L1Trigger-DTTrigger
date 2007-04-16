@@ -2,7 +2,7 @@
 module l1DTTPGEmulDigis = DTTrigProd {
 	
 	# Includes configuration parametersets
-	#include "L1Trigger/DTTrigger/data/dttpg_conf.cff"
+	include "L1Trigger/DTTrigger/data/dttpg_conf.cff"
 
 	# Switch off/on debug printouts for producer class
 	untracked bool   debug               = false
