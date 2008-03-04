@@ -1,19 +1,25 @@
 
 module l1DTTPGEmulDigis = DTTrigProd {
 	
-	# Includes configuration parametersets
-	#include "L1Trigger/DTTrigger/data/dttpg_conf.cff"
-
-	# Switch off/on debug printouts for producer class
-	untracked bool   debug               = false
-	
-	# BX Correction used to set
-	# correct BX to 0 in DTTF input
-	int32 BXOffset = 16
-
-	# Convert output into DTTF sector numbering: 
-	# false means [1-12] (useful for debug)
-	# true is [0-11] useful as input for the DTTF emulator
-	bool   DTTFSectorNumbering = true 
+  # Switch off/on debug printouts for producer class
+  untracked bool   debug               = false
+	 
+  # Convert output into DTTF sector numbering: 
+  # false means [1-12] (useful for debug)
+  # true is [0-11] useful as input for the DTTF emulator
+  bool   DTTFSectorNumbering = true 
+  
+  # Synchronizer related stuff
+  string tTrigMode = 'DTTTrigSyncFromDB'
+  PSet tTrigModeConfig = {
+    untracked bool debug = false
+    double kFactor = -2.00 #retuned in CMSSW15X
+    double vPropWire = 24.4
+    bool doT0Correction = true    #FIXME: remove, not anymore needed from CMSSW180pre1
+    bool doTOFCorrection = false
+    int32 tofCorrType = 1
+    bool doWirePropCorrection  = false
+    int32 wirePropCorrType = 1
+  }  
 
 }
