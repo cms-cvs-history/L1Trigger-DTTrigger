@@ -1,9 +1,9 @@
-
+include "L1Trigger/DTTrigger/data/dttpg_conf.cff"
 
 module dttriganalyzer = DTTrigTest {
 
   # Incude configuration parametersets
-  include "L1Trigger/DTTrigger/data/dttpg_conf.cff"
+  using DTTPGParametersBlock
 
   # Debug Parameter
   untracked bool debug = false 
