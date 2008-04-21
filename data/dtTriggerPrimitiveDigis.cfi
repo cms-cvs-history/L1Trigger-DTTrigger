@@ -10,14 +10,16 @@ module dtTriggerPrimitiveDigis = DTTrigProd {
   bool   DTTFSectorNumbering = true 
   
   # Synchronizer related stuff
-  # Synchronizer related stuff
-  string tTrigMode = 'DTTTrigSyncTOFCorr'
+  string tTrigMode = 'DTTTrigSyncFromDB'
   PSet tTrigModeConfig = {
     untracked bool debug = false
     double kFactor = -2.00 #retuned in CMSSW15X
     double vPropWire = 24.4
-    double tTrig = 500
+    bool doT0Correction = true    #FIXME: remove, not anymore needed from CMSSW180pre1
+    bool doTOFCorrection = false
     int32 tofCorrType = 1
+    bool doWirePropCorrection  = false
+    int32 wirePropCorrType = 1
   }
-
+  
 }
