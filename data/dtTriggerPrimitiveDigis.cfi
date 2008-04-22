@@ -1,4 +1,3 @@
-
 module dtTriggerPrimitiveDigis = DTTrigProd {
 	
   # Switch off/on debug printouts for producer class
@@ -9,7 +8,6 @@ module dtTriggerPrimitiveDigis = DTTrigProd {
   # true is [0-11] useful as input for the DTTF emulator
   bool   DTTFSectorNumbering = true 
   
-  # Synchronizer related stuff
   # Synchronizer related stuff
   string tTrigMode = 'DTTTrigSyncTOFCorr'
   PSet tTrigModeConfig = {

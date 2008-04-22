@@ -1,9 +1,4 @@
-include "L1Trigger/DTTrigger/data/dttpg_conf.cff"
-
 module dttriganalyzer = DTTrigTest {
-
-  # Incude configuration parametersets
-  using DTTPGParametersBlock
 
   # Debug Parameter
   untracked bool debug = false 
@@ -12,16 +7,13 @@ module dttriganalyzer = DTTrigTest {
   untracked string outputFileName = "DTTPG_test.root"
 
   # Synchronizer related stuff
-  string tTrigMode = 'DTTTrigSyncFromDB'
+  string tTrigMode = 'DTTTrigSyncTOFCorr'
   PSet tTrigModeConfig = {
     untracked bool debug = false
     double kFactor = -2.00 #retuned in CMSSW15X
     double vPropWire = 24.4
-    bool doT0Correction = true    #FIXME: remove, not anymore needed from CMSSW180pre1
-    bool doTOFCorrection = false
+    double tTrig = 500
     int32 tofCorrType = 1
-    bool doWirePropCorrection  = false
-    int32 wirePropCorrType = 1
   }
 
 }
