@@ -2,6 +2,9 @@ module dtTriggerPrimitiveDigis = DTTrigProd {
 	
   # Switch off/on debug printouts for producer class
   untracked bool   debug               = false
+
+  # DT digis input tag
+  InputTag digiTag = simMuonDTDigis
 	  
   # Convert output into DTTF sector numbering: 
   # false means [1-12] (useful for debug)

@@ -3,6 +3,9 @@ module dttriganalyzer = DTTrigTest {
   # Debug Parameter
   untracked bool debug = false 
 
+  # DT digis input tag
+  InputTag digiTag = simMuonDTDigis
+
   # Output filename
   untracked string outputFileName = "DTTPG_test.root"
 
