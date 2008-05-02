@@ -1,15 +1,16 @@
-
 module dtTriggerPrimitiveDigis = DTTrigProd {
 	
   # Switch off/on debug printouts for producer class
   untracked bool   debug               = false
+
+  # DT digis input tag
+  InputTag digiTag = muonDTDigis
 	  
   # Convert output into DTTF sector numbering: 
   # false means [1-12] (useful for debug)
   # true is [0-11] useful as input for the DTTF emulator
   bool   DTTFSectorNumbering = true 
   
-  # Synchronizer related stuff
   # Synchronizer related stuff
   string tTrigMode = 'DTTTrigSyncTOFCorr'
   PSet tTrigModeConfig = {
