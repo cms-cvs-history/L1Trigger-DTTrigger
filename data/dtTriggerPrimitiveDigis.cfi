@@ -1,5 +1,5 @@
 module dtTriggerPrimitiveDigis = DTTrigProd {
-	
+
   # Switch off/on debug printouts for producer class
   untracked bool   debug               = false
 
